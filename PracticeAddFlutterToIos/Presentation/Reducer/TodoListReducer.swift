@@ -41,7 +41,7 @@ struct TodoListReducer {
         case todosSaved
     }
     
-    @Dependency(\.todoUseCase) var todoUseCase
+    @Dependency(TodoUseCase.self) var todoUseCase
     
     var body: some ReducerOf<Self> {
         BindingReducer()
