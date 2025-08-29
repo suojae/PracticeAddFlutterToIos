@@ -25,8 +25,6 @@ extension TodoUseCase: TestDependencyKey {
     )
 }
 
-// ✅ DependencyValues extension 제거 (TestDependencyKey 사용할 때는 불필요)
-
 // MARK: - Mock Repository for Testing
 final class MockTodoRepository: TodoRepositoryProtocol {
     private var todos: [Todo] = []
