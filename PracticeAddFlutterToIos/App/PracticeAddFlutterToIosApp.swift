@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct PracticeAddFlutterToIosApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoListView(
+                store: Store(initialState: TodoListReducer.State()) {
+                    TodoListReducer()
+                        ._printChanges()
+                }
+            )
         }
     }
 }
