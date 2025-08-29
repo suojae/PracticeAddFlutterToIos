@@ -19,4 +19,11 @@ struct Todo: Equatable, Identifiable, Codable {
         self.isCompleted = false
         self.createdAt = Date()
     }
+    
+    init(id: UUID, title: String, isCompleted: Bool, createdAt: Date) {
+        self.id = id
+        self.title = title
+        self.isCompleted = isCompleted
+        self.createdAt = createdAt
+    }
 }
